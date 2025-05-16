@@ -4,8 +4,9 @@ server:
 spring:
   application:
     name: product-service
-  datasource:
-    url: mongodb://localhost:27017/learnify
+  data:
+    mongdb:
+      uri: mongodb://localhost:27017/learnify
 
 eureka:
   client:
