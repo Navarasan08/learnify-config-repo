@@ -7,11 +7,10 @@ spring:
     name: gateway-service
   cloud:
     gateway:
-      routes:
-        - id: user-service
-          uri: lb://user-service
-          predicates:
-            - Path=/api/users/**
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
   config:
     import: configserver:http://localhost:8888
 
